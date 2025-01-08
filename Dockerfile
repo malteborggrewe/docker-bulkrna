@@ -43,4 +43,4 @@ RUN R -e "renv::restore()"
 RUN R -e "renv::activate()"
 
 # Keep container running
-CMD ["bash"]
+CMD ["tail", "-f", "/dev/null"]
