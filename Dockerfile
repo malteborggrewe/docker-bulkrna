@@ -35,7 +35,7 @@ COPY renv.lock /analysis/
 
 # Install important R packages for jupyter and others
 RUN Rscript -e "install.packages(c('IRkernel', 'languageserver', 'rmarkdown'))"
-RUN Rscript -e "remotes::install_github("rstudio/renv@v1.1.1")"
+RUN Rscript -e "remotes::install_github('rstudio/renv@v1.1.1')"
 
 # Activate Jupyter R Kernel
 RUN Rscript -e "IRkernel::installspec(user = FALSE)"
